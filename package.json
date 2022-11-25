@@ -1,0 +1,13 @@
+{
+    "name": "lc_bbs_ts",
+    "version": "0.0.1",
+    "description": "Last Call BBS server creating in TypeScript.",
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "copy": "node ./script/copy.js",
+        "start": "npm run build & npm run copy"
+    },
+    "author": "sealleci",
+    "license": "MIT"
+}
