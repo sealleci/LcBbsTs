@@ -59,12 +59,12 @@ const board_len = 17
 const right_box_width = 14
 let x_axis = ''
 
-const colors = {
-    box: 6 as ColorRange,
-    axis: 9 as ColorRange,
-    label: 9 as ColorRange,
-    text: 17 as ColorRange,
-    cell: 17 as ColorRange
+const colors: { [k: string]: ColorRange } = {
+    box: 6,
+    axis: 9,
+    label: 9,
+    text: 17,
+    cell: 17
 }
 
 const cell_pos = {
@@ -128,14 +128,6 @@ const life_game = {
     }
 }
 
-/**
- * Return a string that will be used as the server's name. 
- * @return The name of the server which should be short enough to fit in the *NETronics Connect!* menu.
- */
-function getName(): string {
-    return 'Life Game'
-}
-
 function reset() {
     life_game.status = 'Initialize'
     life_game.round = 0
@@ -148,6 +140,14 @@ function reset() {
     cell_pos.y = ''
 
     tick = 0
+}
+
+/**
+ * Return a string that will be used as the server's name. 
+ * @return The name of the server which should be short enough to fit in the *NETronics Connect!* menu.
+ */
+function getName(): string {
+    return 'Life Game'
 }
 
 /**

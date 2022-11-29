@@ -1,4 +1,8 @@
-"use strict";
+/**
+ * @file Life Game
+ * @version 0.1
+ *
+ */
 const page = {
     max_width: 56,
     max_height: 20
@@ -72,9 +76,6 @@ const life_game = {
         this.round += 1;
     }
 };
-function getName() {
-    return 'Life Game';
-}
 function reset() {
     life_game.status = 'Initialize';
     life_game.round = 0;
@@ -85,6 +86,9 @@ function reset() {
     cell_pos.x = '';
     cell_pos.y = '';
     tick = 0;
+}
+function getName() {
+    return 'Life Game';
 }
 function onConnect() {
     x_axis = '';
